@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Türkiye Ekonomisi</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="13a54a69-1696-80d2-a240-e6b89ba07ae3" class="page sans"><header><h1 class="page-title">Türkiye Ekonomisi</h1><p class="page-description"></p></header><div class="page-body"><p id="13a54a69-1696-80cc-bea6-c6116b5f0bf5" class="">
+</p><figure id="13a54a69-1696-80ac-be3e-cd8d8677b786" class="link-to-page"><a href="Tu%CC%88rkiye%20Ekonomisi%2013a54a69169680d2a240e6b89ba07ae3/Sorular%2013a54a69169680acbe3ecd8d8677b786.html">Sorular</a></figure><figure id="14454a69-1696-8003-84ca-e09f9b9845f0" class="link-to-page"><a href="Tu%CC%88rkiye%20Ekonomisi%2013a54a69169680d2a240e6b89ba07ae3/Cevaplar%2014454a691696800384cae09f9b9845f0.html">Cevaplar</a></figure><p id="13a54a69-1696-80a7-ae87-d102764ef385" class="">
+</p><h1 id="14454a69-1696-80a9-bb37-d08f654d00a0" class=""><strong>Erken Cumhuriyet Dönemi Türkiye Ekonomisi (1923-1945)</strong></h1><h2 id="14454a69-1696-80bc-80f4-d22be1c4c6a3" class=""><strong>A. 1923-1930: Liberal Ekonomi Politikası</strong></h2><h3 id="14454a69-1696-806b-a65a-ee621fe5d257" class=""><strong>Genel Bakış</strong></h3><p id="14454a69-1696-806c-b0b0-c03f618b1054" class="">Cumhuriyetin ilk yıllarında Osmanlı’dan devralınan borç yükü, altyapı eksiklikleri ve tarıma dayalı zayıf ekonomi vardı. Bu dönemde özel sektörün desteklenmesi önceliklendi.</p><h3 id="14454a69-1696-8027-8fc4-f471b6160d50" class="">1.	<strong>İzmir İktisat Kongresi (17 Şubat 1923)</strong></h3><p id="14454a69-1696-8054-b7ff-f6654557036c" class="">•	Amaç: Yeni Türkiye’nin ekonomik hedeflerini belirlemek.</p><p id="14454a69-1696-804e-a537-d2a6a88e17bb" class="">•	Katılımcılar: Çiftçiler, tüccarlar, sanayiciler, işçiler gibi farklı gruplar.</p><p id="14454a69-1696-80b1-884b-c38352ba1b5f" class="">•	Alınan Kararlar:</p><p id="14454a69-1696-800f-a7ad-fda4d432f20f" class="">•	Özel teşebbüs desteklenecek.</p><p id="14454a69-1696-80ee-a349-c2b2476421b6" class="">•	Yerli üretim teşvik edilecek, ithalat azaltılacak.</p><p id="14454a69-1696-806e-860e-eb2781c803d5" class="">•	Aşar vergisinin kaldırılması önerildi.</p><h3 id="14454a69-1696-80e6-8800-f8c97c0811d6" class="">2.	<strong>Ekonomik Politikalar</strong></h3><p id="14454a69-1696-8042-8fed-d869c1f199d8" class="">•	<strong>Aşar Vergisinin Kaldırılması (1925)</strong>: Köylünün üzerindeki ağır vergi yükü kaldırıldı, tarımsal üretim teşvik edildi.</p><p id="14454a69-1696-80f5-9c99-dffc4980f28e" class="">•	<strong>Kapitülasyonların Kaldırılması</strong>: Lozan Antlaşması (1923) ile yabancı devletlerin Osmanlı’dan kalan ekonomik ayrıcalıkları sona erdi.</p><p id="14454a69-1696-8071-8cdd-fe8d9c0a9daf" class="">•	<strong>Teşvik-i Sanayi Kanunu (1927)</strong>: Yerli sanayi kurulmasını teşvik etmek için yasa çıkarıldı. Ancak sermaye ve bilgi eksikliği nedeniyle sınırlı başarı elde edildi.</p><h3 id="14454a69-1696-8017-9441-d1238ef6f613" class="">3.	<strong>Sanayi ve Ticaret</strong></h3><p id="14454a69-1696-80a2-9c74-cd5027077a63" class="">•	<strong>Demiryolları</strong>: Osmanlı’dan kalan demiryolları millileştirildi. Yeni hatlar yapılarak ekonomik entegrasyon artırıldı.</p><p id="14454a69-1696-801f-9232-fe3c3f3b7265" class="">•	<strong>Tarım</strong>: Modern tarım araçlarının ithali teşvik edildi.</p><h3 id="14454a69-1696-801c-8c18-fe880bf11522" class="">4.	<strong>Dış Ticaret ve Borçlar</strong></h3><p id="14454a69-1696-804c-915e-ce6da9bd111c" class="">•	Osmanlı’dan devralınan borçlar 1928’de yapılandırıldı. Ödemeler uzun yıllara yayıldı.</p><p id="14454a69-1696-8099-9451-f94836f8fcfa" class="">•	İhracat gelirleri tarım ürünlerine dayanıyordu, ancak dünya ekonomisine bağımlılık vardı.</p><h2 id="14454a69-1696-80c2-a0ae-fc3e6cfc786e" class=""><strong>B. 1930-1945: Devletçilik Dönemi</strong></h2><h3 id="14454a69-1696-80e5-ac72-c7cc1d459899" class=""><strong>Genel Bakış</strong></h3><p id="14454a69-1696-803c-ab62-f66f31ef1eb5" class="">1930 Dünya Ekonomik Buhranı, Türkiye’yi dışa bağımlı liberal politikaları terk ederek içe dönük bir ekonomik modele geçmeye zorladı. Devletçilik ilkesi benimsenerek devlet ekonomide aktif rol almaya başladı.</p><h3 id="14454a69-1696-8003-9681-df1e9e10804a" class="">1.	<strong>1930 Büyük Buhranının Etkileri</strong></h3><p id="14454a69-1696-80f1-90ac-e4bcb510d672" class="">•	Tarım ürünleri fiyatları düştü, ihracat gelirleri azaldı.</p><p id="14454a69-1696-809c-913b-d689813c7d35" class="">•	Dış ticaret açıkları arttı; döviz sıkıntısı yaşandı.</p><p id="14454a69-1696-80f1-9be3-dc48a461487d" class="">•	Türkiye kendi kendine yeten bir ekonomi oluşturma yoluna gitti.</p><h3 id="14454a69-1696-80e9-8632-f8e270cfc5c8" class="">2.	<strong>Devletçilik İlkesi</strong></h3><p id="14454a69-1696-8056-afdc-fe88d2fadb9d" class="">•	Devlet, temel sanayi yatırımlarını üstlendi.</p><p id="14454a69-1696-805e-828e-fee3617086e4" class="">•	Özel sektör yetersiz kaldığında devlet müdahaleci oldu.</p><p id="14454a69-1696-80c1-82df-d4f7ccd9c334" class="">•	Ekonomik kalkınma için kamu kaynakları kullanıldı.</p><h3 id="14454a69-1696-8034-ad7e-e1f018b1637d" class="">3.	<strong>Sanayi ve Yatırımlar</strong></h3><p id="14454a69-1696-80aa-a1fc-e4599a5577d3" class="">•	<strong>Birinci Beş Yıllık Sanayi Planı (1934-1938)</strong>:</p><p id="14454a69-1696-8086-8c13-f1be682cef86" class="">•	<strong>Hedefler</strong>: Ağır sanayi ve temel ihtiyaç sektörlerine yatırım.</p><p id="14454a69-1696-80f4-8814-c28a008b73ea" class="">•	<strong>Kurulan Kurumlar</strong>:</p><p id="14454a69-1696-801e-95f5-dfd3c7078106" class="">•	<strong>Sümerbank (1933)</strong>: Tekstil ve diğer hafif sanayi alanlarında faaliyet gösterdi.</p><p id="14454a69-1696-8048-bdf2-ea1d5032955a" class="">•	<strong>Etibank (1935)</strong>: Maden işletmeciliği ve enerji sektöründe faaliyet için kuruldu.</p><p id="14454a69-1696-8018-91ce-f46840f7b824" class="">•	Kayseri, İzmit gibi şehirlerde tekstil, demir-çelik ve şeker fabrikaları açıldı.</p><p id="14454a69-1696-8076-a09a-c02aa2b11385" class="">•	<strong>İkinci Beş Yıllık Sanayi Planı (1938)</strong>:</p><p id="14454a69-1696-807d-aa7c-fafd97f59fe3" class="">•	II. Dünya Savaşı nedeniyle tam anlamıyla uygulanamadı.</p><h3 id="14454a69-1696-80e2-afb0-e62304a46c33" class="">4.	<strong>Tarım</strong></h3><p id="14454a69-1696-80cc-b670-f807df59113b" class="">•	Modern tarım aletleri kullanılmaya başlandı.</p><p id="14454a69-1696-8057-90d1-c55b5ae8dbd2" class="">•	Devlet, köylüye kredi sağlamak için Ziraat Bankası’nın kapasitesini genişletti.</p><p id="14454a69-1696-8026-a14b-edd8a0e2847c" class="">•	Toprak reformu tartışmaları yapıldı, ancak uygulanamadı.</p><h3 id="14454a69-1696-808c-b046-e55d4da71809" class="">5.	<strong>Dış Ticaret</strong></h3><p id="14454a69-1696-8067-a45a-f1d355558c7f" class="">•	Gümrük vergileri artırılarak yerli sanayi korundu.</p><p id="14454a69-1696-8017-aa68-ecf01553103d" class="">•	Döviz kısıtlamaları getirildi; ithalat kontrollü hale geldi.</p><h3 id="14454a69-1696-80cf-83b4-e3379477bc42" class="">6.	<strong>İkinci Dünya Savaşı (1939-1945)</strong></h3><p id="14454a69-1696-803b-af9e-f7b5ce027b2d" class="">•	<strong>Savaş Ekonomisi</strong>: Türkiye savaşa girmemesine rağmen kıtlık, karaborsa ve enflasyon yaşandı.</p><p id="14454a69-1696-8073-9fa3-c992e49c4327" class="">•	<strong>Varlık Vergisi (1942)</strong>: Savaşın mali yükünü karşılamak için çıkarıldı, ancak özellikle gayrimüslim tüccarları hedef aldığı için eleştirildi.</p><p id="14454a69-1696-8042-a7ec-c2f6e98e27d3" class="">•	<strong>Milli Korunma Kanunu (1940)</strong>: Ekonomiyi denetim altına almak için hükümete geniş yetkiler verdi.</p><h3 id="14454a69-1696-8040-a447-c19db5e128f3" class="">7.	<strong>Ticaret ve Ulaşım</strong></h3><p id="14454a69-1696-80d1-b8d4-fd51ef7c6190" class="">•	Demiryolu ağı genişletildi, iç ticaret kolaylaştırıldı.</p><p id="14454a69-1696-809b-98e5-edaee14ba96f" class="">•	Deniz taşımacılığı geliştirildi.</p><h3 id="14454a69-1696-804f-8673-f95d49212203" class="">8.	<strong>Toplumsal ve Ekonomik Etkiler</strong></h3><p id="14454a69-1696-8089-a249-dfd5d3f6953c" class="">•	Devletçilik dönemi yatırımları sanayileşmenin temelini oluşturdu.</p><p id="14454a69-1696-80e5-a6a2-c8f2cf2058e1" class="">•	Tarımsal modernleşme sınırlı kaldı; kırsal bölgelerde ekonomik eşitsizlik devam etti.</p><h3 id="14454a69-1696-809b-a201-cde10511abec" class=""><strong>Sonuç</strong></h3><p id="14454a69-1696-80c7-a721-e7d4c5396421" class="">1923-1945 dönemi, Türkiye’nin ekonomik altyapısının temellerinin atıldığı ve modernleşme yolunda önemli adımların atıldığı bir dönemdir. <strong>1923-1930 yılları</strong> liberal politikaların denenmesiyle geçerken, <strong>1930 sonrası dönemde</strong> devletçilik anlayışıyla sanayi ve tarımda devlet öncülüğünde reformlar gerçekleştirilmiştir. Bu dönemin başarıları arasında demiryolları, sanayi tesisleri ve kamu iktisadi teşebbüsleri bulunmaktadır. Ancak dış ticaret dengesizliği ve kırsal bölgelerdeki yoksulluk gibi sorunlar devam etmiştir.</p><p id="14454a69-1696-8074-ac39-df80ea69ada4" class="">
+</p><p id="14454a69-1696-80ed-9d44-ff955c2ac547" class="">
+</p><h1 id="14454a69-1696-80a0-900d-f3f1da197023" class=""><strong>Çok Partili Hayata Geçiş ve Demokrat Parti (DP) Dönemi (1946-1960)</strong></h1><h2 id="14454a69-1696-8050-baf2-eefe1dde7487" class=""><strong>A. 1946-1950: Çok Partili Hayata Geçiş ve CHP Dönemi</strong></h2><h3 id="14454a69-1696-803b-b517-c90ea9a36673" class=""><strong>Genel Bakış</strong></h3><p id="14454a69-1696-8028-a915-f8a3843e675f" class="">II. Dünya Savaşı sonrası Türkiye, demokratikleşme çabalarıyla birlikte ekonomik politikalarını da değiştirmeye başladı. Devletçilik politikaları gözden geçirildi ve özel sektörün önemi vurgulanmaya başlandı.</p><h3 id="14454a69-1696-80e2-91f6-ed90e1b17e0c" class="">1.	<strong>Çok Partili Hayata Geçiş</strong></h3><p id="14454a69-1696-8077-a8af-ebe438b2dcd3" class="">•	Demokrat Parti (DP), 1946’da kuruldu. Ekonomide özel sektörü ön plana çıkarmayı ve serbest piyasa ekonomisini geliştirmeyi savundu.</p><p id="14454a69-1696-807b-ae45-d1c57261dbb8" class="">•	CHP hükümeti, liberal politikalar uygulamaya başladı.</p><h3 id="14454a69-1696-804a-b551-db969411f1ac" class="">2.	<strong>Ekonomik Gelişmeler</strong></h3><p id="14454a69-1696-80b6-afaf-f991e1d940e4" class="">•	<strong>Marshall Planı (1948)</strong>: Türkiye, ABD’den mali ve teknik yardım aldı.</p><p id="14454a69-1696-8002-a693-c79491293c6c" class="">•	Altyapı ve tarım projeleri desteklendi.</p><p id="14454a69-1696-808d-ba05-e26bb9d3a379" class="">•	Traktör ithalatı ve tarımsal makineleşme hız kazandı.</p><p id="14454a69-1696-8062-b6d8-e0d2715b834a" class="">•	<strong>Devletçilikten Uzaklaşma</strong>: Devletin ekonomideki ağırlığı azaltılmaya başlandı.</p><p id="14454a69-1696-8047-aab3-ce8aee64f5bb" class="">•	<strong>Köylü ve Tarım Reformları</strong>:</p><p id="14454a69-1696-80b5-bc31-da1a02344c69" class="">•	Tarımsal üretimi artırmak için modernleşme desteklendi.</p><p id="14454a69-1696-8058-b2da-cb14276b7881" class="">•	Köy Enstitüleri aracılığıyla kırsal bölgelerde eğitime önem verildi.</p><h2 id="14454a69-1696-809b-9268-c999df32e3b9" class=""><strong>B. 1950-1960: Demokrat Parti Dönemi</strong></h2><h3 id="14454a69-1696-8039-9be2-c71a3527d8c1" class=""><strong>Genel Bakış</strong></h3><p id="14454a69-1696-8046-b0f5-c39e004dd049" class="">1950 seçimlerinde Demokrat Parti’nin iktidara gelmesiyle birlikte Türkiye ekonomisinde özel sektöre dayalı büyüme modeli benimsendi. Ancak, dönemin sonunda ekonomik dengesizlikler ve krizler yaşandı.</p><h3 id="14454a69-1696-8052-bc57-d5a689197c8c" class=""><strong>1. Liberal Ekonomik Politika ve Yatırımlar</strong></h3><p id="14454a69-1696-80ba-add6-d3a5f84aa5bd" class="">•	DP, serbest piyasa ekonomisine ağırlık verdi.</p><p id="14454a69-1696-8088-a830-f27258f07e98" class="">•	Özel sektör yatırımları teşvik edildi.</p><p id="14454a69-1696-80e7-a544-eb4677e395bd" class="">•	Devletin müdahalesi azaldı; kamu sektörüne yapılan yatırımlar sınırlandırıldı.</p><h3 id="14454a69-1696-8030-a2c6-eca0d9c45447" class=""><strong>2. Tarımda Dönüşüm</strong></h3><p id="14454a69-1696-80e0-9c61-c4528170647e" class="">•	<strong>Tarımsal Makineleşme</strong>:</p><p id="14454a69-1696-8015-ae31-d5d439befc00" class="">•	1950-1957 arasında traktör sayısı hızla arttı (2.000’den 42.000’e çıktı).</p><p id="14454a69-1696-80c1-8f06-d16ffdadce33" class="">•	Tarımsal üretimde büyük artış sağlandı.</p><p id="14454a69-1696-804e-a5b0-c9a5d63db81e" class="">•	<strong>Tarımsal Ürün İhracatı</strong>:</p><p id="14454a69-1696-80b3-8680-f507dc8342e6" class="">•	DP’nin ilk yıllarında dünya piyasalarındaki olumlu koşullar sayesinde tarım ürünleri ihracatı arttı.</p><p id="14454a69-1696-80bd-a8aa-d209a68d0d3c" class="">•	<strong>Köylüye Destek</strong>:</p><p id="14454a69-1696-80a5-8720-d6723edd869f" class="">•	Kredi imkânları artırıldı.</p><p id="14454a69-1696-80b4-817b-c89b1b4a7370" class="">•	Toprak reformu girişimleri yetersiz kaldı.</p><h3 id="14454a69-1696-808c-8547-c04bb554a001" class=""><strong>3. Altyapı Yatırımları</strong></h3><p id="14454a69-1696-806c-aa6f-f5b6d9aba911" class="">•	<strong>Karayolları</strong>: DP döneminde karayolları inşaatı hız kazandı. Köyler ve şehirler arasındaki ulaşım kolaylaştı.</p><p id="14454a69-1696-80ec-91fb-c52801f210bd" class="">•	<strong>Enerji ve Elektrik</strong>:</p><p id="14454a69-1696-80fe-a8db-c10415219734" class="">•	Hidroelektrik santralleri ve enerji nakil hatları yapıldı.</p><p id="14454a69-1696-8002-b6ec-cd5ce7da4aca" class="">•	<strong>Sanayi</strong>: Hafif sanayi teşvik edildi; ancak ağır sanayiye yeterince yatırım yapılmadı.</p><h3 id="14454a69-1696-80b0-901e-ead3d11328c6" class=""><strong>4. Marshall Planı ve ABD ile İşbirliği</strong></h3><p id="14454a69-1696-8012-a9e4-d3f957648212" class="">•	ABD’den gelen yardımlar sayesinde tarım, altyapı ve ulaşım sektörleri desteklendi.</p><p id="14454a69-1696-80c0-ac22-d4c276845234" class="">•	Türkiye, NATO’ya üye olarak Batı bloğuna dahil oldu. Bu durum, ekonomik ve stratejik ilişkileri güçlendirdi.</p><h3 id="14454a69-1696-80c2-abf5-cdd61c1e5ba3" class=""><strong>5. Dış Ticaret ve Borçlanma</strong></h3><p id="14454a69-1696-80ab-aa8f-f075adbddec0" class="">•	<strong>Dış Ticaret Açıkları</strong>:</p><p id="14454a69-1696-8014-a05e-e351f33c0792" class="">•	İthalat serbestleştirildi; ancak ihracat artışı yetersiz kaldı.</p><p id="14454a69-1696-804c-93d4-d72d51876eb9" class="">•	<strong>Dış Borçlar</strong>:</p><p id="14454a69-1696-8083-9523-e1fa7f0e3bb0" class="">•	Ekonomiyi desteklemek için dış borçlanma arttı.</p><p id="14454a69-1696-800a-838a-d38a250e0713" class="">•	Borçlanma, ekonomiyi kırılgan hale getirdi.</p><h3 id="14454a69-1696-805a-8b8b-f8b4b982b773" class=""><strong>6. Ekonomik Kriz ve 1958 Devalüasyonu</strong></h3><p id="14454a69-1696-8068-adfe-e612a6aac149" class="">•	<strong>1954’ten Sonra Ekonomik Zorluklar</strong>:</p><p id="14454a69-1696-807e-b8c6-e1be86ebe863" class="">•	Dünya piyasalarındaki tarım ürünleri fiyatları düştü.</p><p id="14454a69-1696-8050-9952-db56314ddb50" class="">•	Tarımsal büyüme yavaşladı.</p><p id="14454a69-1696-805c-a994-e69ffd3036fc" class="">•	Enflasyon ve dış ticaret açıkları büyüdü.</p><p id="14454a69-1696-80c3-96a9-d64484a7fa7a" class="">•	<strong>1958 Devalüasyonu</strong>:</p><p id="14454a69-1696-8018-9724-cb6386e68989" class="">•	Türk Lirası, %300 oranında devalüe edildi (1 dolar = 2.8 TL’den 9 TL’ye yükseldi).</p><p id="14454a69-1696-80d9-90ab-f3aad092af15" class="">•	IMF ile stand-by anlaşması yapıldı.</p><p id="14454a69-1696-8009-a00c-e2a361a30fa6" class="">•	Ekonomik istikrarı sağlamak için ithalat kısıtlamaları ve tasarruf önlemleri alındı.</p><h2 id="14454a69-1696-8045-8ef0-f5de7e434e39" class=""><strong>C. Sosyal ve Ekonomik Sonuçlar</strong></h2><h3 id="14454a69-1696-80af-8d5a-c39448f4c725" class="">1.	<strong>Başarılar</strong></h3><p id="14454a69-1696-8017-8776-c370ede52377" class="">•	Tarımsal üretimde önemli artış sağlandı.</p><p id="14454a69-1696-808d-903f-fdb2ba39bdc7" class="">•	Altyapı yatırımlarıyla karayolları ağında genişleme oldu.</p><p id="14454a69-1696-80a8-8aeb-cdeb1058bd0e" class="">•	Serbest piyasa ekonomisine geçişin temelleri atıldı.</p><h3 id="14454a69-1696-8064-95de-fb1c4f137ada" class="">2.	Sorunlar</h3><p id="14454a69-1696-80ae-bbd2-c8f745eceea5" class="">•	Aşırı borçlanma ve dış ticaret açıkları ekonomiyi zayıflattı.</p><p id="14454a69-1696-808e-a1c8-c12e2bef0af6" class="">•	Sanayileşme yavaş ilerledi; ithalat bağımlılığı arttı.</p><p id="14454a69-1696-80b8-8788-daadb8084df5" class="">•	Dışa bağımlı ekonomik yapıyla, kırılgan bir büyüme modeli oluştu.</p><p id="14454a69-1696-8098-86ae-d8ba5f6c95a1" class="">•	1958 ekonomik krizinin etkileri toplumda huzursuzluk yarattı.</p><h3 id="14454a69-1696-808a-b63b-d7403d72fe24" class=""><strong>Genel Değerlendirme</strong></h3><p id="14454a69-1696-8007-ae28-ee22454da2cc" class="">1946-1960 dönemi, Türkiye ekonomisinde dönüşümün yaşandığı bir dönemdir. <strong>1946-1950 yılları</strong>, çok partili hayatın etkisiyle devletçilikten liberal politikalara geçişin hazırlık dönemi olmuştur. <strong>1950-1960 Demokrat Parti dönemi</strong>, ekonomik büyüme, altyapı yatırımları ve tarımsal üretimdeki artışla dikkat çekse de; dönemin sonuna doğru ekonomik dengesizlikler, borçlanma ve dış ticaret açıkları Türkiye ekonomisini derin bir krize sürüklemiştir. Bu süreç, 1960 askeri müdahalesine giden yolu hazırlayan temel nedenlerden biri olmuştur.</p><p id="14454a69-1696-8073-be96-c6bf96452362" class="">
+</p><p id="14454a69-1696-808d-87e1-eeb0ef7266ea" class="">
+</p><h1 id="14454a69-1696-80a1-b1aa-ed2e00faefec" class=""><strong>Planlı Kalkınma Dönemi (1960-1980)</strong></h1><h2 id="14454a69-1696-8000-bc66-e9c3830fdbaf" class=""><strong>A. Genel Bakış</strong></h2><p id="14454a69-1696-80e4-8cf7-d4a3cc668182" class="">Planlı Kalkınma Dönemi, 1960 askeri müdahalesi sonrası Türkiye’nin ekonomide planlama esasına dayalı bir model benimseyerek, kalkınma hedeflerini devlet planlaması aracılığıyla gerçekleştirdiği bir dönemdir. Ekonomik büyüme, sanayileşme ve sosyal kalkınma hedeflenmiştir. <strong>Devlet Planlama Teşkilatı (DPT)</strong> bu dönemin temel kurumu olmuştur.</p><h2 id="14454a69-1696-8093-a452-ee88306d3941" class=""><strong>B. 1960 Askeri Müdahalesi ve Ekonomik Düzenlemeler</strong></h2><h3 id="14454a69-1696-800e-8ad0-daa1c9b0f3a0" class="">1.	<strong>1960 Askeri Müdahalesi</strong></h3><p id="14454a69-1696-8080-855c-ee9fd2789372" class="">•	Demokrat Parti’nin ekonomi politikalarının yol açtığı krizlerin ardından, 27 Mayıs 1960’ta Türk Silahlı Kuvvetleri yönetime el koydu.</p><p id="14454a69-1696-80d1-a19c-f08bd9a6a999" class="">•	Yeni Anayasa (1961), ekonomiye ilişkin önemli düzenlemeler getirdi:</p><p id="14454a69-1696-80ec-a88e-de96d3b110ab" class="">•	Sosyal devlet anlayışı benimsendi.</p><p id="14454a69-1696-80a4-9f3f-cb9a02fcd2f9" class="">•	Çalışma hakları ve sosyal güvenlik sistemleri genişletildi.</p><h3 id="14454a69-1696-803c-a127-fd284de19507" class="">2.	<strong>Devlet Planlama Teşkilatı (DPT)</strong></h3><p id="14454a69-1696-80ef-8592-d20ef18b258b" class="">•	<strong>Kuruluş (1960)</strong>: Ekonomik kalkınmayı planlamak ve uygulamaları koordine etmek amacıyla kuruldu.</p><p id="14454a69-1696-809b-9ad6-f31432c896d9" class="">•	<strong>Görevleri</strong>: Kalkınma planları hazırlamak, kaynakları etkili kullanmak ve ekonomiyi yönlendirmek.</p><h2 id="14454a69-1696-80b4-b637-f5578c63d45d" class=""><strong>C. Kalkınma Planları ve Ekonomik Politikalar</strong></h2><p id="14454a69-1696-803b-8ce1-ed2896537bd5" class="">1960-1980 arasında toplam 4 Beş Yıllık Kalkınma Planı uygulanmıştır.</p><h3 id="14454a69-1696-8032-b516-de11508e624e" class=""><strong>1. Birinci Beş Yıllık Kalkınma Planı (1963-1967)</strong></h3><p id="14454a69-1696-80f3-b3e2-e061c1eeec4e" class=""><strong>Hedefler</strong>:</p><p id="14454a69-1696-809b-bb46-fbf85f3fe040" class="">•	Sanayileşmenin hızlandırılması.</p><p id="14454a69-1696-80a0-bbc7-dd41fcf4b905" class="">•	Ekonomik büyümenin %7 oranında sağlanması.</p><p id="14454a69-1696-80c4-9d04-cc6ace526de4" class="">•	İhracata dayalı büyüme yerine ithal ikameci (import substitution) sanayi modeline geçiş.</p><p id="14454a69-1696-8056-a6cb-ee3d7b32d06b" class=""><strong>Politikalar</strong>:</p><p id="14454a69-1696-80b1-b1fa-d53e4393d5a7" class="">•	Kamu yatırımlarına öncelik verildi.</p><p id="14454a69-1696-80a1-81b4-e1f5a863f37b" class="">•	Ağır sanayi ve temel tüketim mallarına yönelik yatırımlar yapıldı.</p><p id="14454a69-1696-8014-8596-e4264633f250" class="">•	Köylülerin yaşam kalitesini artırmaya yönelik kırsal kalkınma projeleri geliştirildi.</p><p id="14454a69-1696-80cf-a8e3-d0b2c35d0af5" class=""><strong>Sonuçlar</strong>:</p><p id="14454a69-1696-8038-bba7-efb26ae9f71c" class="">•	Sanayileşmede ilerleme sağlandı, ancak büyüme hedefleri tam anlamıyla gerçekleşmedi.</p><p id="14454a69-1696-801d-853c-c678b1cca86b" class="">•	Tarım sektöründe verimlilik artışı sınırlı kaldı.</p><h3 id="14454a69-1696-8007-866c-e893d9386bcd" class=""><strong>2. İkinci Beş Yıllık Kalkınma Planı (1968-1972)</strong></h3><p id="14454a69-1696-80d1-b059-c3050a149055" class=""><strong>Hedefler</strong>:</p><p id="14454a69-1696-80d5-a390-f7b2538b3df8" class="">•	Ekonomik kalkınmayı hızlandırmak.</p><p id="14454a69-1696-80ed-a218-dfa4f0de48c7" class="">•	Özel sektörün sanayideki rolünü artırmak.</p><p id="14454a69-1696-80b2-9f97-ef04d47d89d7" class="">•	Bölgesel eşitsizlikleri azaltmak.</p><p id="14454a69-1696-80e4-ba86-e4201c14f36a" class=""><strong>Politikalar</strong>:</p><p id="14454a69-1696-8014-ad39-cdb45bc49e01" class="">•	<strong>Özelleştirme</strong>: Kamu iktisadi teşebbüsleri (KİT) üzerindeki yükün azaltılması.</p><p id="14454a69-1696-8027-a51f-d74f15620ca7" class="">•	<strong>Sosyal Gelişim</strong>: Eğitim, sağlık ve altyapıya yönelik kamu harcamaları artırıldı.</p><p id="14454a69-1696-80b5-a4e1-f2c780916237" class="">•	<strong>İthal İkamesi</strong>: Yerli üretimi artırmak için ithalat sınırlandırıldı.</p><p id="14454a69-1696-8089-8c80-f09736396245" class=""><strong>Sonuçlar</strong>:</p><p id="14454a69-1696-8015-9e74-c8eb9d8db5a5" class="">•	Sanayideki büyüme hızlandı.</p><p id="14454a69-1696-8042-b928-fb6dd2b1050b" class="">•	Ancak, ithal ikameci model döviz sıkıntısına neden oldu.</p><h3 id="14454a69-1696-80bd-987c-e1c3a498255e" class=""><strong>3. Üçüncü Beş Yıllık Kalkınma Planı (1973-1977)</strong></h3><p id="14454a69-1696-80fe-919a-e9b76716ca5a" class=""><strong>Hedefler</strong>:</p><p id="14454a69-1696-800d-8355-e5403d99472e" class="">•	Sanayileşmeyi daha fazla derinleştirmek.</p><p id="14454a69-1696-80ae-8f3f-d544a4cecf4b" class="">•	Teknolojik altyapıyı geliştirmek.</p><p id="14454a69-1696-8002-b7e5-c58597a91ac0" class="">•	İhracatı artırarak dış ticaret açıklarını kapatmak.</p><p id="14454a69-1696-80d3-90ed-e6a7cc1d2113" class=""><strong>Politikalar</strong>:</p><p id="14454a69-1696-80a8-bde7-e2b49ab2cd2e" class="">•	Kamu-özel sektör işbirliği teşvik edildi.</p><p id="14454a69-1696-8064-b4d9-e502af7a8361" class="">•	Enerji yatırımlarına öncelik verildi.</p><p id="14454a69-1696-80e8-af89-c533db384b60" class="">•	Petrol fiyatlarındaki artışa rağmen dış borçlanmaya devam edildi.</p><p id="14454a69-1696-804a-aaee-ee73f383fbf0" class=""><strong>Sonuçlar</strong>:</p><p id="14454a69-1696-8062-89ce-eb85b32dd708" class="">•	1973 Petrol Krizi, büyüme hedeflerini olumsuz etkiledi.</p><p id="14454a69-1696-8030-80bf-eca7fec5b87b" class="">•	Döviz açığı derinleşti; ithalat zorlaştı.</p><h3 id="14454a69-1696-806c-86f5-f5311375aebd" class=""><strong>4. Dördüncü Beş Yıllık Kalkınma Planı (1979-1983)</strong></h3><p id="14454a69-1696-8024-b801-dc380aa689cc" class=""><strong>Hedefler</strong>:</p><p id="14454a69-1696-807f-bfdd-e3b44967e3c4" class="">•	Ekonomik istikrarı sağlamak.</p><p id="14454a69-1696-8053-8a3f-ce8938beb34f" class="">•	Enflasyonu düşürmek.</p><p id="14454a69-1696-800a-8698-ec6eab52eafa" class="">•	Dış borçlanmayı azaltmak.</p><p id="14454a69-1696-80c9-ad88-dd1fd6f1dcef" class=""><strong>Politikalar</strong>:</p><p id="14454a69-1696-80cb-a690-e50b27abf2cc" class="">•	Döviz kısıtlamaları ve ithalat düzenlemeleri sıkılaştırıldı.</p><p id="14454a69-1696-80a9-833e-c179995508cc" class="">•	Sanayi projeleri askıya alındı.</p><p id="14454a69-1696-803a-9c2f-eb11d92506b5" class="">•	Uluslararası kuruluşlarla işbirliği arttı (IMF ile ilişkiler güçlendi).</p><p id="14454a69-1696-80e3-99fe-c6d62550710d" class=""><strong>Sonuçlar</strong>:</p><p id="14454a69-1696-80e3-a76c-e4a707768ad7" class="">•	1978’de başlayan ekonomik krizle birlikte kalkınma planı hedeflerinden sapmalar yaşandı.</p><p id="14454a69-1696-80a3-b9a5-d027f0cc4f05" class="">•	24 Ocak 1980 Kararları, bu plan döneminde ortaya çıkan sorunları çözmek için hazırlandı.</p><h2 id="14454a69-1696-8077-ad50-d7a16caf9642" class=""><strong>D. Önemli Gelişmeler</strong></h2><h3 id="14454a69-1696-800c-a63f-d57f8d76f368" class="">1.	<strong>Kamu İktisadi Teşebbüsleri (KİT)</strong></h3><p id="14454a69-1696-80a6-b174-fb78cf69b03c" class="">•	Ekonomide devletin ağırlığı devam etti.</p><p id="14454a69-1696-806f-adbe-eabdf520a898" class="">•	KİT’ler hem sanayi hem de tarım sektöründe etkin rol oynadı.</p><h3 id="14454a69-1696-8061-82cd-d3e9e2fd1ae8" class="">2.	<strong>İthal İkameci Sanayileşme Modeli</strong></h3><p id="14454a69-1696-80f1-9a4e-e407622d78ba" class="">•	Türkiye’nin sanayi üretiminde dışa bağımlılığını azaltmayı hedefleyen bir model benimsendi.</p><p id="14454a69-1696-804e-a51e-e79455efab3d" class="">•	Yerli üretim teşvik edilirken, ithalata yüksek vergiler getirildi.</p><p id="14454a69-1696-8030-9182-cfa1592a93d1" class="">•	Ancak, teknoloji ve hammadde ithalatına bağımlılık sürdü.</p><h3 id="14454a69-1696-80f0-94f0-e2932bbe6cf8" class="">3.	<strong>Bölgesel Kalkınma Projeleri</strong></h3><p id="14454a69-1696-8060-a78b-ef3b6711c221" class="">•	GAP gibi bölgesel kalkınma projeleri planlandı ancak uygulanması sonraki yıllarda hız kazandı.</p><p id="14454a69-1696-80b3-b93d-f59249ce8e07" class="">•	Doğu ve Güneydoğu Anadolu’da kalkınma projeleri başlatıldı.</p><h3 id="14454a69-1696-80db-b742-c2f9279e0631" class="">4.	Dış Ticaret</h3><p id="14454a69-1696-80c3-9203-de8d35ada95b" class="">•	Dış ticaret açıkları büyüdü; ithal ikameci model sürdürülebilir olmaktan çıktı.</p><p id="14454a69-1696-8054-8b6c-c2e76edd6f97" class="">•	Petrol krizi sonrası döviz sıkıntısı yaşandı.</p><h3 id="14454a69-1696-805c-b90a-cd7c0bb7b404" class="">5.	<strong>24 Ocak 1980 Ekonomik Kararları</strong></h3><p id="14454a69-1696-807c-870b-eb6cb1cbe9f7" class="">•	İhracata dayalı büyüme modeli benimsenmeye başladı.</p><p id="14454a69-1696-80ef-821e-fd769c8ce8c5" class="">•	Liberal ekonomi politikalarına geçişin ilk adımları atıldı.</p><h2 id="14454a69-1696-80cd-a352-d6ac1b1c590a" class=""><strong>E. Sosyal ve Ekonomik Sonuçlar</strong></h2><h3 id="14454a69-1696-80be-af99-c64d411247d0" class="">1.	<strong>Başarılar</strong></h3><p id="14454a69-1696-809b-b2fe-f665088b7a57" class="">•	Sanayileşme hızlandı; altyapı yatırımları arttı.</p><p id="14454a69-1696-8018-af56-ff37e16a182c" class="">•	Sosyal devlet anlayışı güçlendi.</p><p id="14454a69-1696-803c-853e-c1fd7d4e9bb9" class="">•	Eğitim ve sağlık gibi alanlarda gelişme sağlandı.</p><h3 id="14454a69-1696-80fb-aafd-fa4999568d64" class="">2.	<strong>Sorunlar</strong></h3><p id="14454a69-1696-80c0-8994-e959b707e596" class="">•	İthal ikameci modelin sınırlılıkları ekonomide tıkanmalara yol açtı.</p><p id="14454a69-1696-80dd-a7fd-c9f16face889" class="">•	Döviz sıkıntısı ve dış borç artışı, ekonomik krizi derinleştirdi.</p><p id="14454a69-1696-80b1-8f53-c86d14ed9178" class="">•	Enflasyon kontrol altına alınamadı.</p><p id="14454a69-1696-8062-af25-cead7cf2f9cf" class="">•	Petrol krizi ve dış borçlanma ekonomiyi kırılgan hale getirdi.</p><h3 id="14454a69-1696-8074-bc43-e6c03b074c11" class=""><strong>Genel Değerlendirme</strong></h3><p id="14454a69-1696-8081-b647-fdd89e2859b6" class="">1960-1980 dönemi, Türkiye’nin planlı kalkınma modeline geçtiği ve sanayileşme yolunda önemli adımlar attığı bir dönemdir. Ancak, ithal ikameci modelin yarattığı döviz sıkıntıları ve dış borç yükü nedeniyle ekonomik kalkınma hedefleri tam anlamıyla gerçekleştirilememiştir. <strong>24 Ocak 1980 Kararları</strong>, bu dönemin sonunda gelen ekonomik darboğazdan çıkış için bir dönüm noktası olmuştur ve liberal ekonomi politikalarının başlangıcını oluşturmuştur.</p><p id="14454a69-1696-8035-9c0d-cf0684cca01a" class="">
+</p><p id="14454a69-1696-80aa-b17b-c760305ee1e8" class="">
+</p><h1 id="14454a69-1696-80d7-a763-e2f96012acfb" class=""><strong>Serbest Piyasa ve Liberal Dönüşüm (1980-2000)</strong></h1><h2 id="14454a69-1696-8061-8206-e0fdee13c3f4" class=""><strong>A. Genel Bakış</strong></h2><p id="14454a69-1696-8062-81d8-cd0193fdcefb" class="">1980 sonrası dönemde Türkiye ekonomisi, ithal ikameci sanayileşmeden ihracata dayalı büyüme modeline geçiş yaptı. Bu süreçte serbest piyasa ekonomisi, ekonomik reformlar ve küreselleşme politikaları ön planda oldu. Dönem, 24 Ocak 1980 Ekonomik Kararları ile başlayan köklü değişiklikler ve sonrasında yaşanan krizler, reformlar ve dalgalanmalarla şekillenmiştir.</p><h2 id="14454a69-1696-80e8-bc70-c36e68634a62" class=""><strong>B. 24 Ocak 1980 Ekonomik Kararları</strong></h2><h3 id="14454a69-1696-800c-b5b3-e4f9f75dd193" class=""><strong>Hedefler</strong>:</h3><p id="14454a69-1696-80cc-a4bc-dcf027a89d40" class="">Türkiye ekonomisinin ithal ikameci modelden ihracata dayalı büyüme modeline geçişini sağlamak ve ekonomik istikrarı oluşturmak.</p><h3 id="14454a69-1696-80f6-8cc2-f39f8fc5aad8" class=""><strong>Başlıca Politikalar</strong>:</h3><h3 id="14454a69-1696-803d-8c36-f23f0ca1fa98" class="">1.	<strong>Dış Ticaret ve Döviz Politikaları</strong>:</h3><p id="14454a69-1696-80ff-9b88-e2e059b35016" class="">•	İhracat teşvik edildi.</p><p id="14454a69-1696-802b-a96b-c7342f4b2c7d" class="">•	Döviz kuru serbest bırakılarak piyasa mekanizmasına göre belirlenmeye başlandı.</p><p id="14454a69-1696-80ff-a177-f1e090753813" class="">•	İthalat üzerindeki kısıtlamalar kaldırıldı.</p><h3 id="14454a69-1696-807f-80d9-f34f419f7b0a" class="">2.	<strong>Liberalizasyon ve Özelleştirme</strong>:</h3><p id="14454a69-1696-8057-b0e1-e4388b1768c7" class="">•	Kamu İktisadi Teşebbüsleri (KİT) özelleştirilmeye başlandı.</p><p id="14454a69-1696-8077-bfa8-c1fdd490b372" class="">•	Ekonomi üzerindeki devlet müdahalesi azaltıldı.</p><h3 id="14454a69-1696-805e-84c4-f1b74fd5d17e" class="">3.	<strong>Enflasyon ve Maliye Politikaları</strong>:</h3><p id="14454a69-1696-801f-a0b4-f5c13653a3de" class="">•	Enflasyonla mücadele için sıkı mali politikalar uygulandı.</p><p id="14454a69-1696-8011-aea4-fbf7a530bea8" class="">•	Kamu harcamaları sınırlandırıldı.</p><h3 id="14454a69-1696-809a-a03e-ee8db5191a23" class="">4.	<strong>Yatırım ve Teşvikler</strong>:</h3><p id="14454a69-1696-8000-9f4e-f37f2ee52e26" class="">•	Sanayi ve ihracat yatırımları için teşvikler artırıldı.</p><p id="14454a69-1696-80eb-a2cf-ea0d955b4973" class="">•	Yabancı sermaye yatırımları teşvik edildi.</p><h3 id="14454a69-1696-80c3-a43d-ec293c7a766d" class="">5.	<strong>Uluslararası İşbirliği</strong>:</h3><p id="14454a69-1696-8024-bbc7-f6c03584a357" class="">•	IMF ve Dünya Bankası ile yakın işbirliği kuruldu.</p><p id="14454a69-1696-80cb-8576-e8f3595f2244" class="">•	Ekonomik reformlar, uluslararası finans kuruluşlarının gözetiminde uygulandı.</p><h3 id="14454a69-1696-801a-8bed-cdeac3841eb7" class=""><strong>Sonuçlar</strong>:</h3><p id="14454a69-1696-801d-a7ab-fa06c60891b7" class="">•	İhracat hızla arttı, ancak ithalat bağımlılığı da büyüdü.</p><p id="14454a69-1696-806e-89e3-e0250736d193" class="">•	Döviz sıkıntısı bir süreliğine hafifledi.</p><p id="14454a69-1696-802a-9b75-c46a406245a7" class="">•	Enflasyon düşürülemedi ve yüksek borçlanma sürdü.</p><h2 id="14454a69-1696-80b8-bc43-ca9d77456318" class=""><strong>C. Turgut Özal ve 1980’li Yıllar</strong></h2><p id="14454a69-1696-80fe-b7bc-d5d8493ff631" class=""><strong>Turgut Özal</strong>, 1983 seçimlerinde Anavatan Partisi (ANAP) lideri olarak iktidara geldi ve liberal politikaları sürdürdü.</p><h3 id="14454a69-1696-801f-91cb-f7b00e5046c2" class=""><strong>Başlıca Gelişmeler</strong>:</h3><h3 id="14454a69-1696-8028-9fb5-f9c4a61ff633" class="">1.	<strong>Ekonomik Büyüme ve İhracat Odaklı Politikalar</strong>:</h3><p id="14454a69-1696-80ed-87ec-e9404fb8c9db" class="">•	Türkiye, tarıma dayalı bir ekonomiden sanayi ve hizmet ağırlıklı bir yapıya geçiş yaptı.</p><p id="14454a69-1696-80fd-b486-ebbb99c7e8e6" class="">•	İhracatın kompozisyonu değişti; tarımsal ürünler yerine sanayi ürünleri ağırlık kazandı.</p><h3 id="14454a69-1696-8070-8564-e5b406d7494b" class="">2.	<strong>Serbest Piyasa Ekonomisi</strong>:</h3><p id="14454a69-1696-80a8-842c-da99808483b0" class="">•	Gümrük tarifeleri indirildi.</p><p id="14454a69-1696-801b-9ca9-ddcf370b955a" class="">•	Finansal piyasalar serbestleştirildi; borsa ve bankacılık sektörü geliştirildi.</p><h3 id="14454a69-1696-8026-b2a1-ec90692ac013" class="">3.	<strong>Yabancı Sermaye ve Özelleştirme</strong>:</h3><p id="14454a69-1696-80d8-82b4-f6b1bd6ec256" class="">•	Yabancı yatırımlar teşvik edildi.</p><p id="14454a69-1696-80d9-a409-c6cb51a20d6d" class="">•	Devletin ekonomideki payını azaltmak için KİT’ler özelleştirilmeye başlandı.</p><h3 id="14454a69-1696-8063-8119-e76c40d9f85e" class="">4.	<strong>Altyapı Yatırımları</strong>:</h3><p id="14454a69-1696-8084-bf01-d46c79b837e6" class="">•	Otoyol projeleri ve enerji yatırımları hız kazandı.</p><p id="14454a69-1696-8076-84bf-d1e4215daaab" class="">•	Telekomünikasyon sektörüne modernleşme yatırımları yapıldı.</p><h3 id="14454a69-1696-806d-b108-f061af7e0b09" class=""><strong>Sorunlar ve Eleştiriler</strong>:</h3><p id="14454a69-1696-80bf-b7f7-e2dfdf90d8d2" class="">•	Gelir dağılımındaki adaletsizlik arttı.</p><p id="14454a69-1696-8022-8a2d-dd31b9ec8f13" class="">•	Enflasyon kontrol altına alınamadı.</p><p id="14454a69-1696-80f6-9978-ec8f11b24b75" class="">•	Dış borçlar büyüdü.</p><h2 id="14454a69-1696-80df-a120-c9fb60e1c4e2" class=""><strong>D. 1990’lar: Ekonomik ve Siyasi İstikrarsızlık Dönemi</strong></h2><h3 id="14454a69-1696-8081-a323-f11de371e93d" class=""><strong>Genel Görünüm</strong></h3><p id="14454a69-1696-8022-9d80-cc79ab71c41b" class="">1990’lar, ekonomik krizler, siyasi koalisyon hükümetleri ve dış borçların artmasıyla karakterize edilen bir dönemdir. Özelleştirme ve liberal reformlar hız kaybetti.</p><h3 id="14454a69-1696-807c-8031-d19aa030275d" class="">1.	<strong>Körfez Savaşı’nın Ekonomik Etkileri (1991)</strong>:</h3><p id="14454a69-1696-80fa-8071-eeed1a5af58a" class="">•	Bölgesel ticaret zarar gördü.</p><p id="14454a69-1696-80f9-a0b1-fb6c0d5bb7d7" class="">•	Türkiye, Irak’a olan ihracatını kaybetti.</p><h3 id="14454a69-1696-80f5-85c6-d729d9e6f102" class="">2.	<strong>Finansal Serbestleşme ve Bankacılık Krizleri</strong>:</h3><p id="14454a69-1696-806f-9554-eced1b5d084c" class="">•	Kısa vadeli sermaye girişleri (sıcak para) ekonomiyi kırılgan hale getirdi.</p><p id="14454a69-1696-800d-bc5c-def91adf2785" class="">•	1994 ekonomik krizi patlak verdi:</p><p id="14454a69-1696-80c4-989d-e390fe5deb33" class="">•	Türk Lirası büyük ölçüde devalüe edildi.</p><p id="14454a69-1696-80d1-b934-eb41a989d2fa" class="">•	Enflasyon %100’lere yaklaştı.</p><p id="14454a69-1696-8038-89a9-f061fd3ff7a4" class="">•	IMF ile yeni bir stand-by anlaşması yapıldı.</p><h3 id="14454a69-1696-8059-bc68-dede2fcb4e45" class="">3.	<strong>Özelleştirme ve Reformların Yavaşlaması</strong>:</h3><p id="14454a69-1696-8091-bbac-fa4e8e3db163" class="">•	Koalisyon hükümetleri nedeniyle ekonomik reformlar yavaşladı.</p><p id="14454a69-1696-80e4-91d0-e81809344dd4" class="">•	KİT’ler özelleştirilemedi.</p><h3 id="14454a69-1696-8039-a959-cf9f133082c8" class="">4.	<strong>Dış Ticaret ve Borçlanma</strong>:</h3><p id="14454a69-1696-8037-9e56-d8063a7c2db7" class="">•	İhracatta büyüme sınırlı kaldı.</p><p id="14454a69-1696-809d-a9cf-e3bf44d726f1" class="">•	Dış borçlar hızla arttı ve bütçe açıkları büyüdü.</p><h3 id="14454a69-1696-806b-a4a9-c87ab339f6db" class="">5.	<strong>1999 Marmara Depremi ve Ekonomik Etkiler</strong>:</h3><p id="14454a69-1696-8032-b2c0-cf1236f7c5a2" class="">•	Deprem, ekonomik aktiviteyi ciddi şekilde olumsuz etkiledi.</p><p id="14454a69-1696-80b1-b408-e80e81369b46" class="">•	Depremin maliyeti, bütçe açığını daha da artırdı.</p><h2 id="14454a69-1696-80c9-998c-cb208b4662c9" class=""><strong>E. Sosyal ve Ekonomik Sonuçlar</strong></h2><h3 id="14454a69-1696-80c2-8eec-e9db75505f42" class="">1.	<strong>Başarılar</strong></h3><p id="14454a69-1696-80d3-995f-d75106c2c091" class="">•	İhracata dayalı büyüme modeli ile sanayi sektörü gelişti.</p><p id="14454a69-1696-80f8-a326-d3bee7952d45" class="">•	Finansal piyasalar serbestleştirildi ve Borsa İstanbul uluslararası düzeyde büyüdü.</p><p id="14454a69-1696-8079-aed7-d9712b4821ea" class="">•	Türkiye, küresel ekonomiye daha entegre hale geldi.</p><h3 id="14454a69-1696-8059-a1a4-d4c5c9802e6c" class="">2.	<strong>Sorunlar</strong></h3><p id="14454a69-1696-80cd-a09f-e9656b401aa7" class="">•	Yüksek enflasyon ve sık tekrarlayan ekonomik krizler yaşandı.</p><p id="14454a69-1696-8077-95b6-e05177373de7" class="">•	Gelir dağılımı bozuldu; yoksulluk arttı.</p><p id="14454a69-1696-80c4-8dae-ec895ea69a36" class="">•	Dış borç ve cari açık ekonomik istikrarı tehdit etti.</p><h2 id="14454a69-1696-8038-8105-c717a78122b9" class=""><strong>F. Genel Değerlendirme</strong></h2><p id="14454a69-1696-800d-b134-e946164a4aac" class="">1980-2000 dönemi, Türkiye’nin ekonomik yapısında köklü değişimlerin yaşandığı bir dönemdir. <strong>1980’ler</strong>, liberal ekonomik reformların başarıyla uygulandığı ve büyüme sağlandığı bir dönemdir. Ancak, <strong>1990’lar</strong>, siyasi istikrarsızlık ve ekonomik krizlerin damgasını vurduğu bir süreç olmuştur. Liberal reformların sürdürülememesi, ekonomideki kırılganlığı artırmış, bu durum 2001 kriziyle sonuçlanan birikimlerin temelini oluşturmuştur.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
